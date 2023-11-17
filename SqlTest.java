@@ -1,20 +1,3 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one or more
- * contributor license agreements.  See the NOTICE file distributed with
- * this work for additional information regarding copyright ownership.
- * The ASF licenses this file to you under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.apache.wayang.api.sql;
 
 import org.apache.wayang.basic.data.Record;
@@ -350,84 +333,6 @@ class LineItemTuple implements Serializable {
             tuple.L_SHIPMODE = record.getString(i);
             i++;
             tuple.L_COMMENT = record.getString(i);
-
-//            int startPos = 0;
-//            int endPos = line.indexOf(';', startPos);
-//            tuple.L_ORDERKEY = Long.valueOf(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_PARTKEY = Long.valueOf(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_SUPPKEY = Long.valueOf(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_LINENUMBER = Integer.valueOf(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_QUANTITY = Double.valueOf(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_EXTENDEDPRICE = Double.valueOf(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_DISCOUNT = Double.valueOf(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_TAX = Double.valueOf(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_RETURNFLAG = line.charAt(startPos + 1);
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_LINESTATUS = line.charAt(startPos + 1);
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_SHIPDATE = parseDate(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_COMMITDATE = parseDate(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = line.indexOf(';', startPos);
-//            tuple.L_RECEIPTDATE = parseDate(line.substring(startPos + 1, endPos - 1));
-//
-//            startPos = endPos + 1;
-//            endPos = startPos - 1;
-//            do {
-//                endPos++;
-//                endPos = line.indexOf(';', endPos);
-//            } while (line.charAt(endPos - 1) != '"' || line.charAt(endPos + 1) != '"');
-//            tuple.L_SHIPINSTRUCT = line.substring(startPos + 1, endPos - 1);
-//
-//            startPos = endPos + 1;
-//            endPos = startPos - 1;
-//            do {
-//                endPos++;
-//                endPos = line.indexOf(';', endPos);
-//            } while (line.charAt(endPos - 1) != '"' || line.charAt(endPos + 1) != '"');
-//            tuple.L_SHIPMODE = line.substring(startPos + 1, endPos - 1);
-//
-//            startPos = endPos + 1;
-//            endPos = startPos - 1;
-//            do {
-//                endPos++;
-//                endPos = line.indexOf(';', endPos);
-//            } while (endPos >= 0 && (line.charAt(endPos - 1) != '"' || (endPos < line.length() - 1 && line.charAt(endPos + 1) != '"')));
-//            assert endPos < 0 : String.format("Parsing error: unexpected ';' at %d. Input: %s", endPos, line);
-//            endPos = line.length();
-//            tuple.L_COMMENT = line.substring(startPos + 1, endPos - 1);
 
             return tuple;
         }
